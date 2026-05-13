@@ -19,22 +19,32 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
-.letter_link:hover{
+.letter_link:hover {
     box-shadow: 0px 0px 100px  gold;
     transition: 0.2s ease-in;
 }
 
 .room1_door {
     position: relative;
+    width: 50px;
+    height: 50px;
+    left: 49%;
+    top: 95%;
+}
+.room1_door:hover{
     background-image: url(img/pixil-frame-0.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    left: 48%;
-    top: 90%;
 }
-.room1_door:hover{
-    box-shadow: 0px 0px 100px  gold;
-    transition: 0.2s ease-in;
+
+.back_btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 16px;
 }
