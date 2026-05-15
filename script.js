@@ -6,13 +6,35 @@ const rooms = {
     'room1': 'img/rom1.png',
     'letter': 'img/letter1.png',
     'door': 'img/rom1_door.png',
-    'hallway': 'img/hallway.png'
+    'hallway': 'img/hallway.png',
+    'gate': 'img/gate.png'
 };
 
 let doorUnlock = false;
 const correctCombo = ['king', 'crest', 'knight'];
+let currentCombo = [];
 
+document.querySelectorAll('.picture_btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentCombo.push(btn.id);
+        btn.classList.add('selected');
+        if (currentCombo.length === correctCombo.length) {
+            doorUnlock = true;
+            for (let i = 0; i < correctCombo.length; i++) {
+                if (currentCombo[i] !== correctCombo[i]) {
+                    doorUnlock = false;
+                }
+            }
+            if (doorUnlock == false) {
+                currentCombo = [];
+                document.querySelectorAll('.picture_btn').forEach(el => el.classList.remove('selected'));
 
+            }
+          
+        }
+
+    });
+});
 
 function switchRoom(roomName) {
     const newImage = rooms[roomName];

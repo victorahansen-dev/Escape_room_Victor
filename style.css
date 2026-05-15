@@ -60,3 +60,23 @@
         height: 280px;
         cursor: pointer;
     }
+
+.picture_btn {
+    position: absolute;
+    width: 145px;
+    height: 180px;
+    background: transparent;
+    cursor: pointer;
+    background-color: transparent;
+}
+.picture_btn:hover {
+    box-shadow: 0px 0px 20px gold;
+    transition: 0.2s ease-in;
+}
+.picture_btn.selected {
+    box-shadow: 0px 0px 30px cyan;
+}
+
+#king   { top: 30%; left: 33%; }
+#crest  { top: 26%; left: 46%; }
+#knight { top: 30%; left: 60%; }
