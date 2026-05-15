@@ -16,26 +16,31 @@ const rooms = {
     'outside': 'img/outside.png'
 };
 
+function showPopup(message) {
+    const popup = document.getElementById('popup');
+    popup.textContent = message;
+    popup.classList.add('visible');
+    clearTimeout(popup._timeout);
+    popup._timeout = setTimeout(() => popup.classList.remove('visible'), 2500);
+}
+
 function switchRoom(roomName) {
     const newImage = rooms[roomName];
-    if (doorUnlock && roomName == 'hallway') {
-        history.push(newImage);
-        document.body.style.backgroundImage = "url('" + newImage + "')";
-        updateClickables(roomName);
+    if (roomName == 'hallway' && !doorUnlock) {
+        showPopup("These paintings... I think they're a combination to the door.");
+        return;
     }
-    else if (hasKey && roomName == 'outside') {
-        history.push(newImage);
-        document.body.style.backgroundImage = "url('" + newImage + "')";
-        updateClickables(roomName);
+    if (roomName == 'outside' && !hasKey) {
+        showPopup("The gate is locked. I need a key.");
+        return;
     }
-    else if (roomName !== 'hallway' && roomName !== "outside") {
-        history.push(newImage);
-        document.body.style.backgroundImage = "url('" + newImage + "')";
-        updateClickables(roomName);
+    history.push(newImage);
+    document.body.style.backgroundImage = "url('" + newImage + "')";
+    updateClickables(roomName);
 
-        if (roomName === 'room2_noKey') {
-            hasKey = true;
-        }
+    if (roomName === 'room2_noKey') {
+        hasKey = true;
+        showPopup("I found a key!");
     }
 }
 let hasKey = false;
