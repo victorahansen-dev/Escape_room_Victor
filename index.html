@@ -9,11 +9,16 @@
 </head>
 
 <body>
-    <div class="letter_link" onclick="switchRoom('letter','.letter_link')">
-    </div>
+    <div class="clickable room1 letter_link" onclick="switchRoom('letter')"></div>
+    <div class="clickable room1 room1_door" onclick="switchRoom('door')"></div>
 
-    <div class="room1_door" onclick="switchRoom('door','room1_door')">
-    </div>
+    <!-- gang -->
+    <div class="clickable door hallway_class" onclick="switchRoom('hallway')"></div>
+
+    <!-- bildekombinasjon -->
+    <div class="clickable door picture_btn" id="king"></div>
+    <div class="clickable door picture_btn" id="crest"></div>
+    <div class="clickable door picture_btn" id="knight"></div>
 
     <!-- Tilbakeknapp -->
     <button class="back_btn" onclick="goBack()">← Back</button>

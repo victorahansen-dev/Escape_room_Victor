@@ -1,19 +1,32 @@
-
 // Holder styr på hvilke rom spilleren har besøkt
 let history = ['img/rom1.png'];
 
 // Kobler romnavn til bildefiler
 const rooms = {
-    'room1':  'img/rom1.png',
+    'room1': 'img/rom1.png',
     'letter': 'img/letter1.png',
-    'door':   'img/rom1_door.png'
+    'door': 'img/rom1_door.png',
+    'hallway': 'img/hallway.png'
 };
 
-// Bytter bakgrunnsbilde når spilleren klikker på noe
+let doorUnlock = false;
+const correctCombo = ['king', 'crest', 'knight'];
+
+
+
 function switchRoom(roomName) {
-    const newImage = rooms[roomName]; // henter bildet
-    history.push(newImage);          // lagrer i historikk
-    document.body.style.backgroundImage = "url('" + newImage + "')";
+    const newImage = rooms[roomName];
+    if (doorUnlock && roomName == 'hallway') {
+        history.push(newImage);
+        document.body.style.backgroundImage = "url('" + newImage + "')";
+        updateClickables(roomName);
+    }
+    else if (roomName !== "hallway") {
+        history.push(newImage);
+        document.body.style.backgroundImage = "url('" + newImage + "')";
+        updateClickables(roomName);
+    }
+
 }
 
 // Går tilbake til forrige rom
@@ -35,3 +48,5 @@ function updateClickables(roomName) {
     document.querySelectorAll('.clickable').forEach(el => el.style.display = 'none'); // skjuler alle
     document.querySelectorAll('.' + roomName).forEach(el => el.style.display = 'block'); // viser riktige
 }
+
+updateClickables('room1'); //starter i rom 1 og stopper andre div-er relatert til andre rom til å vise

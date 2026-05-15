@@ -1,50 +1,62 @@
-body {
-    background-size: 70%;
-    background-image: url('img/rom1.png');
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    margin: 0;
-    background-color: black;
-}
+    body {
+        background-size: 70%;
+        background-image: url('img/rom1.png');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        margin: 0;
+        background-color: black;
+    }
 
-.letter_link {
-  position: absolute;
-  background-color: transparent;
-  width: 105px;
-  height: 50px;
-  top: 72%;   
-  left: 47%;  
-  cursor: pointer;
-  border-radius: 3px;
-}
-.letter_link:hover {
-    box-shadow: 0px 0px 100px  gold;
-    transition: 0.2s ease-in;
-}
-
-.room1_door {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    left: 49%;
-    top: 95%;
-}
-.room1_door:hover{
-    background-image: url(img/pixil-frame-0.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.back_btn {
+    .letter_link {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 14px;
+    background-color: transparent;
+    width: 105px;
+    height: 50px;
+    top: 72%;   
+    left: 47%;  
     cursor: pointer;
-    font-size: 16px;
-}
+    border-radius: 3px;
+    }
+    .letter_link:hover {
+        box-shadow: 0px 0px 100px  gold;
+        transition: 0.2s ease-in;
+    }
+
+    .room1_door {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 49%;
+        top: 95%;
+    }
+    /* pil */
+    .room1_door:hover{
+        background-image: url(img/pixil-frame-0.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* tilbake knapp */
+    .back_btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 8px 14px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .hallway_class {
+        background-color: transparent;
+        position: absolute;
+        left: 45%;
+        top: 53%;
+        width: 200px;
+        height: 280px;
+        cursor: pointer;
+    }
