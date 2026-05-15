@@ -10,30 +10,32 @@
     }
 
     .letter_link {
-    position: absolute;
-    background-color: transparent;
-    width: 105px;
-    height: 50px;
-    top: 72%;   
-    left: 47%;  
-    cursor: pointer;
-    border-radius: 3px;
+        position: absolute;
+        background-color: transparent;
+        width: 95px;
+        height: 45px;
+        top: 72%;
+        left: 47%;
+        cursor: pointer;
+        border-radius: 60px;
     }
+
     .letter_link:hover {
-        box-shadow: 0px 0px 100px  gold;
+        box-shadow: 0px 0px 100px gold;
         transition: 0.2s ease-in;
     }
 
-    .room1_door {
+    .down_arrow {
         position: absolute;
-        width: 50px;
-        height: 50px;
-        left: 49%;
-        top: 95%;
+        width: 80px;
+        height: 80px;
+        left: 48%;
+        top: 90%;
     }
+
     /* pil */
-    .room1_door:hover{
-        background-image: url(img/pixil-frame-0.png);
+    .down_arrow:hover {
+        background-image: url(img/down_arrow.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -51,7 +53,7 @@
         font-size: 16px;
     }
 
-    .hallway_class {
+    .room1_door {
         background-color: transparent;
         position: absolute;
         left: 45%;
@@ -61,22 +63,104 @@
         cursor: pointer;
     }
 
-.picture_btn {
-    position: absolute;
-    width: 145px;
-    height: 180px;
-    background: transparent;
-    cursor: pointer;
-    background-color: transparent;
-}
-.picture_btn:hover {
-    box-shadow: 0px 0px 20px gold;
-    transition: 0.2s ease-in;
-}
-.picture_btn.selected {
-    box-shadow: 0px 0px 30px cyan;
-}
+    .room2_hallway {
+        background-color: transparent;
+        border-radius: 50px;
+        position: absolute;
+        right: 22%;
+        top: 40%;
+        width: 130px;
+        height: 360px;
+        cursor: pointer;
+    }
 
-#king   { top: 30%; left: 33%; }
-#crest  { top: 26%; left: 46%; }
-#knight { top: 30%; left: 60%; }
+    .room2_key{
+        position: absolute;
+        background-color: transparent;
+        width: 50px;
+        height: 120px;
+        right: 20%;
+        top: 31%;
+        cursor: pointer;
+    }
+    .room2_key:hover{
+        box-shadow: 0px 0px 100px gold;
+        transition: 0.2s ease-in;
+        border-radius: 10px;
+    }
+    .room2_door_noKey {
+        position: absolute;
+        background-color: transparent;
+        width: 170px;
+        height: 300px;
+        left: 46%;
+        top: 43%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+
+    .room2_door_Key {
+        position: absolute;
+        background-color: transparent;
+        width: 170px;
+        height: 300px;
+        left: 46%;
+        top: 43%;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+
+    .hallway_class {
+        position: absolute;
+        background-color: transparent;
+        width: 180px;
+        height: 210px;
+        top: 35%;
+        left: 45%;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .gate_class {
+        position: absolute;
+        background-color: red;
+        width: 260px;
+        height: 330px;
+        top: 40%;
+        left: 43%;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .picture_btn {
+        position: absolute;
+        width: 145px;
+        height: 180px;
+        background: transparent;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .picture_btn:hover {
+        box-shadow: 0px 0px 20px gold;
+        transition: 0.2s ease-in;
+    }
+
+    .picture_btn.selected {
+        box-shadow: 0px 0px 30px cyan;
+    }
+
+    #king {
+        top: 30%;
+        left: 33%;
+    }
+
+    #crest {
+        top: 26%;
+        left: 46%;
+    }
+
+    #knight {
+        top: 30%;
+        left: 60%;
+    }
