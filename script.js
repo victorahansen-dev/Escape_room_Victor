@@ -1,5 +1,9 @@
-// Holder styr på hvilke rom spilleren har besøkt
+// variabler
 let history = ['img/rom1.png'];
+let hasKey = false;
+let doorUnlock = false;
+const correctCombo = ['king', 'crest', 'knight'];
+let currentCombo = [];
 
 updateClickables('room1'); //starter i rom 1 og stopper andre div-er relatert til andre rom til å vise
 
@@ -15,7 +19,7 @@ const rooms = {
     'room2_noKey': 'img/room2_noKey.png',
     'outside': 'img/outside.png'
 };
-
+// pop-up tekst
 function showPopup(message) {
     const popup = document.getElementById('popup');
     popup.textContent = message;
@@ -24,6 +28,7 @@ function showPopup(message) {
     popup._timeout = setTimeout(() => popup.classList.remove('visible'), 2500);
 }
 
+// funskjon for å bytte rom
 function switchRoom(roomName) {
     const newImage = rooms[roomName];
     if (roomName == 'hallway' && !doorUnlock) {
@@ -43,8 +48,8 @@ function switchRoom(roomName) {
         showPopup("I found a key!");
     }
 }
-let hasKey = false;
-// Går tilbake til forrige rom
+
+//gå tilbake knapp funksjon
 function goBack() {
     if (history.length > 1) {       // sjekker om det er noe å gå tilbake til
         history.pop();              // fjerner nåværende rom
@@ -63,11 +68,7 @@ function updateClickables(roomName) {
     document.querySelectorAll('.clickable').forEach(el => el.style.display = 'none'); // skjuler alle
     document.querySelectorAll('.' + roomName).forEach(el => el.style.display = 'block'); // viser riktige
 }
-
-let doorUnlock = false;
-const correctCombo = ['king', 'crest', 'knight'];
-let currentCombo = [];
-
+// bildekombinasjon 
 document.querySelectorAll('.picture_btn').forEach(btn => {
     btn.addEventListener('click', () => {
         currentCombo.push(btn.id);

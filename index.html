@@ -9,16 +9,19 @@
 </head>
 
 <body>
+    <!--rom 1-->
     <div class="clickable room1 letter_link" onclick="switchRoom('letter')"></div>
     <div class="clickable room1 down_arrow" onclick="switchRoom('door')"></div>
-    <div class="clickable door room1_door" onclick="switchRoom('hallway')"></div>
 
     <!-- gang -->
     <div class="clickable hallway hallway_class" onclick="switchRoom('gate')"></div>
     <div class="clickable hallway room2_hallway" onclick="switchRoom('room2')"></div>
+    <div class="clickable door room1_door" onclick="switchRoom('hallway')"></div>
+    <!--rom 2-->
     <div class="clickable room2 room2_key" onclick="switchRoom('room2_noKey')"></div>
     <div class="clickable room2 room2_door_noKey" onclick="switchRoom('hallway')"></div>
     <div class="clickable room2_noKey room2_door_Key" onclick="switchRoom('hallway')"></div>
+    <!--uteområde-->
     <div class="clickable gate gate_class" onclick="switchRoom('outside')"></div>
 
 
@@ -27,6 +30,7 @@
     <div class="clickable door picture_btn" id="crest"></div>
     <div class="clickable door picture_btn" id="knight"></div>
 
+    <!--popup-tekst-->
     <div id="popup"></div>
 
     <!-- Tilbakeknapp -->

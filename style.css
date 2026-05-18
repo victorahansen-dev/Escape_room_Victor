@@ -1,3 +1,4 @@
+    /* rom 1 */
     body {
         background-size: 70%;
         background-image: url('img/rom1.png');
@@ -9,6 +10,18 @@
         background-color: black;
     }
 
+    /* rom 1 dør */
+    .room1_door {
+        background-color: transparent;
+        position: absolute;
+        left: 45%;
+        top: 53%;
+        width: 200px;
+        height: 280px;
+        cursor: pointer;
+    }
+
+    /* brev */
     .letter_link {
         position: absolute;
         background-color: transparent;
@@ -25,6 +38,7 @@
         transition: 0.2s ease-in;
     }
 
+    /* pil */
     .down_arrow {
         position: absolute;
         width: 80px;
@@ -33,7 +47,6 @@
         top: 90%;
     }
 
-    /* pil */
     .down_arrow:hover {
         background-image: url(img/down_arrow.png);
         background-size: cover;
@@ -53,13 +66,15 @@
         font-size: 16px;
     }
 
-    .room1_door {
-        background-color: transparent;
+    /* gang */
+    .hallway_class {
         position: absolute;
+        background-color: transparent;
+        width: 180px;
+        height: 210px;
+        top: 35%;
         left: 45%;
-        top: 53%;
-        width: 200px;
-        height: 280px;
+        border-radius: 50px;
         cursor: pointer;
     }
 
@@ -74,7 +89,8 @@
         cursor: pointer;
     }
 
-    .room2_key{
+    /* rom 2 nøkkel */
+    .room2_key {
         position: absolute;
         background-color: transparent;
         width: 50px;
@@ -83,11 +99,13 @@
         top: 31%;
         cursor: pointer;
     }
-    .room2_key:hover{
+    .room2_key:hover {
         box-shadow: 0px 0px 100px gold;
         transition: 0.2s ease-in;
         border-radius: 10px;
     }
+
+    /* rom 2 u/nøkkel */
     .room2_door_noKey {
         position: absolute;
         background-color: transparent;
@@ -99,6 +117,7 @@
         border-radius: 50px;
     }
 
+    /* rom 2 m/nøkkel */
     .room2_door_Key {
         position: absolute;
         background-color: transparent;
@@ -110,17 +129,7 @@
         border-radius: 50px;
     }
 
-    .hallway_class {
-        position: absolute;
-        background-color: transparent;
-        width: 180px;
-        height: 210px;
-        top: 35%;
-        left: 45%;
-        border-radius: 50px;
-        cursor: pointer;
-    }
-
+    /*ute område */
     .gate_class {
         position: absolute;
         background-color: transparent;
@@ -132,6 +141,7 @@
         cursor: pointer;
     }
 
+    /* bildekombinasjon */
     .picture_btn {
         position: absolute;
         width: 145px;
@@ -165,22 +175,23 @@
         left: 60%;
     }
 
-#popup {
-    position: fixed;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 12px 22px;
-    border: 1px solid rgba(255,255,255,0.3);
-    font-size: 15px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    white-space: nowrap;
-}
+    /* pop-up tekst */
+    #popup {
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 12px 22px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 15px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        white-space: nowrap;
+    }
 
-#popup.visible {
-    opacity: 1;
-}
+    #popup.visible {
+        opacity: 1;
+    }
